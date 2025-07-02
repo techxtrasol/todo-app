@@ -8,7 +8,7 @@ const Todo = () => {
   return (
     <>
     < Form todos={todos} setTodos={setTodos} />
-    < TodoList todos={todos}/>
+    < TodoList todos={todos} setTodos={setTodos} />
     </>
   );
 }

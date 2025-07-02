@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 const Form = ({todos, setTodos}) => {
-   const [todo, setTodo] = useState("")
+   const [todo, setTodo] = useState({name:"", done:false})
   function handleTodoSubmit(e) {
     e.preventDefault()
     setTodos([...todos, todo])
-    setTodo("")
+    setTodo({name:"", done:false})
   }
   return (
     <>
@@ -14,9 +14,9 @@ const Form = ({todos, setTodos}) => {
           <div className="space-y-1 pt-6 flex flex-col">
             <input
               className="text-2xl border-2 focus:outline-none px-1 text-green-700 border-green-600 py-2 rounded" type="text"
-              onChange={(event) => setTodo(event.target.value)}
+              onChange={(event) => setTodo({name:event.target.value, done: false})}
               placeholder="Enter Todo item..."
-              value={todo}
+              value={todo.name}
             />
             <button
               className="cursor-pointer font-extrabold text-xl px-4 py-3 rounded-md bg-green-700 text-white"
