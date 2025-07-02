@@ -4,10 +4,10 @@ import TopBar from "./components/TopBar"
 function App() {
   return (
     <>
-    <TopBar />
-    <div className="min-h-screen bg-gray-100">
-     < Todo />
-    </div>
+      <TopBar />
+      <div className="min-h-screen bg-gray-100">
+        < Todo />
+      </div>
 
     </>
   )
